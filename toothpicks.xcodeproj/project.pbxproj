@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AB858D671ABC290500E0D6F5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB858D661ABC290500E0D6F5 /* main.cpp */; };
+		ABAAA5DF1ABC29E80087F772 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABAAA5DE1ABC29E80087F772 /* OpenGL.framework */; };
+		ABAAA5E11ABC2AEF0087F772 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABAAA5E01ABC2AEF0087F772 /* GLUT.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		AB858D631ABC290500E0D6F5 /* toothpicks */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = toothpicks; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB858D661ABC290500E0D6F5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		ABAAA5DE1ABC29E80087F772 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
+		ABAAA5E01ABC2AEF0087F772 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/GLUT.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABAAA5E11ABC2AEF0087F772 /* GLUT.framework in Frameworks */,
+				ABAAA5DF1ABC29E80087F772 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +47,8 @@
 		AB858D5A1ABC290500E0D6F5 = {
 			isa = PBXGroup;
 			children = (
+				ABAAA5E01ABC2AEF0087F772 /* GLUT.framework */,
+				ABAAA5DE1ABC29E80087F772 /* OpenGL.framework */,
 				AB858D651ABC290500E0D6F5 /* toothpicks */,
 				AB858D641ABC290500E0D6F5 /* Products */,
 			);
@@ -202,14 +210,18 @@
 		AB858D6B1ABC290500E0D6F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.9;
 			};
 			name = Debug;
 		};
 		AB858D6C1ABC290500E0D6F5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.9;
 			};
 			name = Release;
 		};
@@ -232,6 +244,7 @@
 				AB858D6C1ABC290500E0D6F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
