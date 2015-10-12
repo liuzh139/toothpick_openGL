@@ -139,6 +139,12 @@ void toothpick(float x, float y, int g, float len)
     
 }
 
+        glTranslatef((g*2)*length, -length, 0);
+        glRotatef(180, 0, 0, 1);
+        glBegin(GL_LINES);
+        glVertex2f(-length, 0);
+        glVertex2f(length, 0);
+        glEnd();
 
 void drawToothpick(float x, float y, int g, float s){
     
@@ -242,6 +248,11 @@ void processSpecialKeys(int key, int xx, int yy) {
 }
 
 int main(int argc, char ** argv) {
+  
+//    std::cout << "Please enter the generation: ";
+//    std::cin >> gene;
+//    std::cout << "Please enter the size: ";
+//    std::cin >> toothpickSize;
     
     std::cout << "Please enter the generation: ";
     std::cin >> gene;
